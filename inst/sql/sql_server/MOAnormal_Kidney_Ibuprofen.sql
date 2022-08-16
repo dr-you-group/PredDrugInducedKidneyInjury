@@ -4,37 +4,37 @@ CREATE TABLE #Codesets (
 )
 ;
 
-INSERT INTO #Codesets (codeset_id, concept_id)
+INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3013721)
 
 ) I
-) C UNION ALL 
+) C UNION ALL 
 SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3006923)
 
 ) I
-) C UNION ALL 
+) C UNION ALL 
 SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3024128)
 
 ) I
-) C UNION ALL 
+) C UNION ALL 
 SELECT 6 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3035995)
 
 ) I
-) C UNION ALL 
+) C UNION ALL 
 SELECT 7 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1317640)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1177480)
 
 ) I
-) C UNION ALL 
+) C UNION ALL 
 SELECT 8 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
   select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3016723)
@@ -94,8 +94,8 @@ FROM
 (
   select pe.person_id, pe.event_id
   FROM #qualified_events pe
-  
-JOIN (
+  
+JOIN (
 -- Begin Criteria Group
 select 0 as index_id, person_id, event_id
 FROM
@@ -135,15 +135,15 @@ HAVING COUNT(cc.event_id) >= 2
 ) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
 ) Results
 ;
-
+
 select 1 as inclusion_rule_id, person_id, event_id
 INTO #Inclusion_1
 FROM 
 (
   select pe.person_id, pe.event_id
   FROM #qualified_events pe
-  
-JOIN (
+  
+JOIN (
 -- Begin Criteria Group
 select 0 as index_id, person_id, event_id
 FROM
@@ -185,17 +185,17 @@ HAVING COUNT(cc.event_id) <= 0
 ) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
 ) Results
 ;
-
-SELECT inclusion_rule_id, person_id, event_id
-INTO #inclusion_events
-FROM (select inclusion_rule_id, person_id, event_id from #Inclusion_0
-UNION ALL
-select inclusion_rule_id, person_id, event_id from #Inclusion_1) I;
-TRUNCATE TABLE #Inclusion_0;
-DROP TABLE #Inclusion_0;
-
-TRUNCATE TABLE #Inclusion_1;
-DROP TABLE #Inclusion_1;
+
+SELECT inclusion_rule_id, person_id, event_id
+INTO #inclusion_events
+FROM (select inclusion_rule_id, person_id, event_id from #Inclusion_0
+UNION ALL
+select inclusion_rule_id, person_id, event_id from #Inclusion_1) I;
+TRUNCATE TABLE #Inclusion_0;
+DROP TABLE #Inclusion_0;
+
+TRUNCATE TABLE #Inclusion_1;
+DROP TABLE #Inclusion_1;
 
 
 with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date, op_end_date, ordinal) as
@@ -231,8 +231,8 @@ from #included_events;
 with cohort_ends (event_id, person_id, end_date) as
 (
 	-- cohort exit dates
-  -- End Date Strategy
-SELECT event_id, person_id, end_date from #strategy_ends
+  -- End Date Strategy
+SELECT event_id, person_id, end_date from #strategy_ends
 
 ),
 first_ends (person_id, start_date, end_date) as
@@ -302,7 +302,7 @@ group by person_id, end_date
 
 DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;
 INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)
-select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
+select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
 FROM #final_cohort CO
 ;
 
@@ -449,8 +449,8 @@ TRUNCATE TABLE #inclusion_rules;
 DROP TABLE #inclusion_rules;
 }
 
-TRUNCATE TABLE #strategy_ends;
-DROP TABLE #strategy_ends;
+TRUNCATE TABLE #strategy_ends;
+DROP TABLE #strategy_ends;
 
 
 TRUNCATE TABLE #cohort_rows;
