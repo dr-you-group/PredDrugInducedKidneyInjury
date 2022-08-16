@@ -1,6 +1,6 @@
 # Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredDrugInducedLiverInjury
+# This file is part of PredDrugInducedKidneyInjury
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #' Execute the Study
 #'
 #' @details
-#' This function executes the PredDrugInducedLiverInjury Study.
+#' This function executes the PredDrugInducedKidneyInjury Study.
 #' 
 #' @param connectionDetails    An object of type \code{connectionDetails} as created using the
 #'                             \code{\link[DatabaseConnector]{createConnectionDetails}} function in the
@@ -147,7 +147,7 @@
 #     ParallelLogger::logInfo(paste0("Creating diagnostic results for ",cdmDatabaseName))
 #     predictionAnalysisListFile <- system.file("settings",
 #                                               "predictionAnalysisList.json",
-#                                               package = "PredDrugInducedLiverInjury")
+#                                               package = "PredDrugInducedKidneyInjury")
 #     predictionAnalysisList <- PatientLevelPrediction::loadPredictionAnalysisList(predictionAnalysisListFile)
 #     
 #     
@@ -241,7 +241,7 @@
 #   
 #     predictionAnalysisListFile <- system.file("settings",
 #                                               "predictionAnalysisList.json",
-#                                               package = "PredDrugInducedLiverInjury")
+#                                               package = "PredDrugInducedKidneyInjury")
 #     predictionAnalysisList <- PatientLevelPrediction::loadPredictionAnalysisList(predictionAnalysisListFile)
 #     predictionAnalysisList$connectionDetails = connectionDetails
 #     predictionAnalysisList$cdmDatabaseSchema = cdmDatabaseSchema
@@ -327,7 +327,7 @@
 #     ensure_installed("Hydra")
 #     predictionAnalysisListFile <- system.file("settings",
 #                                               "predictionAnalysisList.json",
-#                                               package = "PredDrugInducedLiverInjury")
+#                                               package = "PredDrugInducedKidneyInjury")
 #     jsonSettings <-  tryCatch({Hydra::loadSpecifications(file=predictionAnalysisListFile)},
 #                               error=function(cond) {
 #                                 stop('Issue with json file...')

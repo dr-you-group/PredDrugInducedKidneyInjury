@@ -428,7 +428,7 @@
             }],
             "Count": null
           },
-          "name": "[MOA] Abnormal_LFT",
+          "name": "[MOA] Abnormal_Kidney",
           "description": null
         }],
         "PrimaryCriteria": {
@@ -442,7 +442,7 @@
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[MOA]Abnormal_LFT",
+      "name": "[MOA]Abnormal_Kidney",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",
@@ -1205,7 +1205,7 @@
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[MOA]normal_LFT_concept",
+      "name": "[MOA]normal_Kidney_concept",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",

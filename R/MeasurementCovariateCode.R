@@ -220,7 +220,7 @@ createMeasurementCovariateSettings <- function(covariateName, conceptSet,
                             analysisId = analysisId
                             )
   
-  attr(covariateSettings, "fun") <- "PredDrugInducedLiverInjury::getMeasurementCovariateData"
+  attr(covariateSettings, "fun") <- "PredDrugInducedKidneyInjury::getMeasurementCovariateData"
   class(covariateSettings) <- "covariateSettings"
   return(covariateSettings)
 }

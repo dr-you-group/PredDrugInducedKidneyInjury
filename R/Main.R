@@ -1,6 +1,6 @@
 # Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredDrugInducedLiverInjury
+# This file is part of PredDrugInducedKidneyInjury
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #' Execute the Study
 #'
 #' @details
-#' This function executes the PredDrugInducedLiverInjury Study.
+#' This function executes the PredDrugInducedKidneyInjury Study.
 #' 
 #' @param databaseDetails      Database details created using \code{PatientLevelPrediction::createDatabaseDetails()} 
 #' @param outputFolder         Name of local folder to place results; make sure to use forward slashes
@@ -135,7 +135,7 @@ execute <- function(
     
     predictionAnalysisListFile <- system.file("settings",
                                               "predictionAnalysisList.json",
-                                              package = "PredDrugInducedLiverInjury")
+                                              package = "PredDrugInducedKidneyInjury")
     
     predictionAnalysisList <- tryCatch(
       {PatientLevelPrediction::loadPlpAnalysesJson(file.path(predictionAnalysisListFile))},
@@ -273,13 +273,13 @@ execute <- function(
     tryCatch({
       
       createValidationPackage(
-        devPackageName = 'PredDrugInducedLiverInjury',
+        devPackageName = 'PredDrugInducedKidneyInjury',
         devDatabaseName = databaseDetails$cdmDatabaseName,
         analysisLocation = outputFolder,
         analysisIds = analysesToValidate,
         outputFolder = outputFolder,
-        validationPackageName = 'PredDrugInducedLiverInjuryValidation',
-        description = 'validating models in PredDrugInducedLiverInjury',
+        validationPackageName = 'PredDrugInducedKidneyInjuryValidation',
+        description = 'validating models in PredDrugInducedKidneyInjury',
         createdBy = 'anonymous',
         organizationName = 'none',
         useHydra = useHydra,

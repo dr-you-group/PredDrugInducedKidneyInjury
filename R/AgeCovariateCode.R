@@ -109,7 +109,7 @@ createAgeCovariateSettings <- function(covariateName = 'Age at index',
                             analysisId = analysisId
   )
   
-  attr(covariateSettings, "fun") <- "PredDrugInducedLiverInjury::getAgeCovariateData"
+  attr(covariateSettings, "fun") <- "PredDrugInducedKidneyInjury::getAgeCovariateData"
   class(covariateSettings) <- "covariateSettings"
   return(covariateSettings)
 }

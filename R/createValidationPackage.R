@@ -33,7 +33,7 @@ createValidationPackage <- function(modelFolder,
                      analysisIds = analysisIds)
   
   ParallelLogger::logInfo('Transporting cohorts')
-  transportCohort(packageName = "PredDrugInducedLiverInjury",
+  transportCohort(packageName = "PredDrugInducedKidneyInjury",
                   outputDir = file.path(outputFolder,pn,"inst"))
   
   return(TRUE)
@@ -80,7 +80,7 @@ transportPlpModels <- function(analysesDir,
 }
 
 
-transportCohort <- function(packageName = "PredDrugInducedLiverInjury",
+transportCohort <- function(packageName = "PredDrugInducedKidneyInjury",
                             outputDir = "./inst"){
   
   cohortLocation <- system.file("cohorts",package = packageName)
@@ -105,7 +105,7 @@ createValidationJson <- function(modelFolder,
   
   predictionAnalysisListFile <- system.file("settings",
                                             "predictionAnalysisList.json",
-                                            package = "PredDrugInducedLiverInjury")
+                                            package = "PredDrugInducedKidneyInjury")
   
   devJS <- jsonlite::read_json(predictionAnalysisListFile)
   

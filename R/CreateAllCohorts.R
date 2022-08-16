@@ -1,6 +1,6 @@
 # Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredDrugInducedLiverInjury
+# This file is part of PredDrugInducedKidneyInjury
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ createCohorts <- function(
                                         cohortTable = databaseDetails$cohortTable
                                       )
   )
-  cohortDefinitionSet <- CohortGenerator::getCohortDefinitionSet(packageName = "PredDrugInducedLiverInjury",
+  cohortDefinitionSet <- CohortGenerator::getCohortDefinitionSet(packageName = "PredDrugInducedKidneyInjury",
                                                                  settingsFileName = "settings/CohortsToCreate.csv",
                                                                  cohortFileNameValue = "cohortName")
   CohortGenerator::generateCohortSet(connection = connection,
@@ -55,7 +55,7 @@ createCohorts <- function(
 }
 
 addCohortNames <- function(data, IdColumnName = "cohortId", nameColumnName = "cohortName") {
-  pathToCsv <- system.file("settings/CohortsToCreate.csv", package = "PredDrugInducedLiverInjury")
+  pathToCsv <- system.file("settings/CohortsToCreate.csv", package = "PredDrugInducedKidneyInjury")
   
   idToName <- utils::read.csv(pathToCsv)
   idToName <- idToName[order(idToName$cohortId), ]

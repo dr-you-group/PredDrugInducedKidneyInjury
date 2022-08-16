@@ -1,5 +1,5 @@
 createValidationPackage <- function(
-  devPackageName = 'PredDrugInducedLiverInjury',
+  devPackageName = 'PredDrugInducedKidneyInjury',
   devDatabaseName,
   analysisLocation,
   analysisIds = NULL,
