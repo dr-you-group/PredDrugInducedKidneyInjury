@@ -17,14 +17,14 @@ createPlpProtocol <- function(
     predictionAnalysisListFile <- system.file(
       "settings",
       "predictionAnalysisList.json",
-      package = "PredDrugInducedLiverInjury"
+      package = "PredDrugInducedKidneyInjury"
     )
   }
   
   protocolLoc <- system.file(
     "protocol",
     "main.Rmd",
-    package = "PredDrugInducedLiverInjury"
+    package = "PredDrugInducedKidneyInjury"
   )
   
   rmarkdown::render(
