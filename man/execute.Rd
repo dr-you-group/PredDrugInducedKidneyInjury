@@ -108,7 +108,7 @@ in packaged results.}
 Execute the Study
 }
 \details{
-This function executes the PredDrugInducedKidneyInjury Study.
+This function executes the PredDrugInducedLiverInjury Study.
 }
 \examples{
 \dontrun{

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A Package Skeleton for Patient-Level Prediction Studies • PredDrugInducedKidneyInjury</title>
+<title>A Package Skeleton for Patient-Level Prediction Studies • PredDrugInducedLiverInjury</title>
 
 
 <!-- jquery -->
@@ -70,7 +70,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">PredDrugInducedKidneyInjury</a>
+        <a class="navbar-link" href="index.html">PredDrugInducedLiverInjury</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
@@ -113,7 +113,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/OHDSI/PredDrugInducedKidneyInjury">
+  <a href="https://github.com/OHDSI/PredDrugInducedLiverInjury">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -138,9 +138,9 @@
 <div id="a-package-skeleton-for-patient-level-prediction-studies" class="section level1">
 
 <p>A skeleton package, to be used as a starting point when implementing patient-level prediction studies.</p>
-<p>Vignette: <a href="https://raw.githubusercontent.com/OHDSI/PredDrugInducedKidneyInjury/master/inst/doc/UsingSkeletonPackage.pdf">Using the package skeleton for patient-level prediction studies</a></p>
-<p>For information on how to generate shiny apps using the R skeleton package see: <a href="https://raw.githubusercontent.com/OHDSI/PatientLevelPrediction/testcode/inst/doc/CreatingShinyApp.pdf">Creating shiny app for patient-level prediction studies</a>. To combine multiple skeleton package results into a single shiny app <a href="https://github.com/OHDSI/PredDrugInducedKidneyInjury/blob/master/extras/populateMultipleShiny.R">see populate multiple shiny app R code code</a></p>
-<p>For information on adding custom covariates based on ATLAS cohorts see: <a href="https://raw.githubusercontent.com/OHDSI/PredDrugInducedKidneyInjury/master/inst/doc/AddingCohortCovariates.pdf">Adding custom covariates using ATLAS cohorts</a>.</p>
+<p>Vignette: <a href="https://raw.githubusercontent.com/OHDSI/PredDrugInducedLiverInjury/master/inst/doc/UsingSkeletonPackage.pdf">Using the package skeleton for patient-level prediction studies</a></p>
+<p>For information on how to generate shiny apps using the R skeleton package see: <a href="https://raw.githubusercontent.com/OHDSI/PatientLevelPrediction/testcode/inst/doc/CreatingShinyApp.pdf">Creating shiny app for patient-level prediction studies</a>. To combine multiple skeleton package results into a single shiny app <a href="https://github.com/OHDSI/PredDrugInducedLiverInjury/blob/master/extras/populateMultipleShiny.R">see populate multiple shiny app R code code</a></p>
+<p>For information on adding custom covariates based on ATLAS cohorts see: <a href="https://raw.githubusercontent.com/OHDSI/PredDrugInducedLiverInjury/master/inst/doc/AddingCohortCovariates.pdf">Adding custom covariates using ATLAS cohorts</a>.</p>
 </div>
 <div id="suggested-requirements" class="section level1">
 <h1 class="hasAnchor">
@@ -169,7 +169,7 @@
 <ul>
 <li>Execute the study by running the code in (extras/CodeToRun.R) :</li>
 </ul>
-<div class="sourceCode" id="cb2"><html><pre class="r">  library(PredDrugInducedKidneyInjury)
+<div class="sourceCode" id="cb2"><html><pre class="r">  library(PredDrugInducedLiverInjury)
   # USER INPUTS
 #=======================
 # The folder where the study intermediate and result files will be written:
@@ -241,7 +241,7 @@ execute(connectionDetails = connectionDetails,
   PatientLevelPrediction::checkPlpInstallation()
   
   # install the network package
-  devtools::install_github("ohdsi-studies/PredDrugInducedKidneyInjury")</pre></html></div>
+  devtools::install_github("ohdsi-studies/PredDrugInducedLiverInjury")</pre></html></div>
 </div>
 <div id="development-status" class="section level1">
 <h1 class="hasAnchor">

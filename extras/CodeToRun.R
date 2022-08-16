@@ -28,7 +28,7 @@ cdmDatabaseName <-
 cohortDatabaseSchema <- 
 # table name where the cohorts will be generated
 
-cohortTable <- "PredDrugInducedLiverInjuryCohort"
+cohortTable <- "PredDrugInducedKidneyInjuryCohort"
 # pick the minimum count that will be displayed if creating the shiny app, the validation package,
 # the diagnosis or packaging the results to share
 minCellCount <- 5
@@ -49,7 +49,7 @@ databaseDetails <- PatientLevelPrediction::createDatabaseDetails(
 
 logSettings <- PatientLevelPrediction::createLogSettings(
         verbosity = 'INFO', 
-        logName = 'PredDrugInducedLiverInjury'
+        logName = 'PredDrugInducedKidneyInjury'
 )
 
 

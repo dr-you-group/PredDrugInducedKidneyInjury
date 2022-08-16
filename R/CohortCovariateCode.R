@@ -1,4 +1,4 @@
-# Copyright 2020 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of SkeletonExistingPredictionModelStudy
 #
@@ -137,7 +137,7 @@ createCohortCovariateSettings <- function(covariateName, covariateId,
                             lnAgeInteraction = lnAgeInteraction,
                             analysisId = analysisId)
   
-  attr(covariateSettings, "fun") <- "PredDrugInducedKidneyInjury::getCohortCovariateData"
+  attr(covariateSettings, "fun") <- "PredDrugInducedLiverInjury::getCohortCovariateData"
   class(covariateSettings) <- "covariateSettings"
   return(covariateSettings)
 }

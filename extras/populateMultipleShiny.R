@@ -6,7 +6,7 @@ populateMultipleShinyApp <- function(shinyDirectory,
 
   #check inputs
   if(missing(shinyDirectory)){
-    shinyDirectory <- system.file("shiny", "PLPViewer", package = "PredDrugInducedKidneyInjury")
+    shinyDirectory <- system.file("shiny", "PLPViewer", package = "PredDrugInducedLiverInjury")
   }
   if(missing(resultDirectory)){
     stop('Need to enter the resultDirectory')

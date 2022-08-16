@@ -1,6 +1,6 @@
-# Copyright 2020 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredDrugInducedKidneyInjury
+# This file is part of PredDrugInducedLiverInjury
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("PredDrugInducedKidneyInjury")
+OhdsiRTools::checkUsagePackage("PredDrugInducedLiverInjury")
 OhdsiRTools::updateCopyrightYearFolder()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/PredDrugInducedKidneyInjury.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/PredDrugInducedKidneyInjury.pdf")
+shell("rm extras/PredDrugInducedLiverInjury.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/PredDrugInducedLiverInjury.pdf")
 
 # Create vignette ---------------------------------------------------------
 rmarkdown::render("vignettes/UsingSkeletonPackage.Rmd",
@@ -48,12 +48,13 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
                                                 insertTableSql = TRUE,
                                                 insertCohortCreationR = TRUE,
                                                 generateStats = FALSE,
-                                                packageName = "PredDrugInducedKidneyInjury")
+                                                packageName = "PredDrugInducedLiverInjury")
 
 # Create analysis details -------------------------------------------------
+library(PatientLevelPrediction)
 source("extras/CreatePredictionAnalysisDetails.R")
 createAnalysesDetails("inst/settings")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("PredDrugInducedKidneyInjury")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("PredDrugInducedLiverInjury")
 

@@ -27,3 +27,4 @@ for(i in seq(nrow(drugConcepts))){
   filename <- paste0("~/chandryou/PredDrugInducedKidneyInjury/inst/cohorts/MOAnormal_Kidney_", drugConceptName, ".json")
   writeLines(JJ, filename)
 }
+

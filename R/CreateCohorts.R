@@ -1,6 +1,6 @@
-# Copyright 2020 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredDrugInducedKidneyInjury
+# This file is part of PredDrugInducedLiverInjury
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
   
   # Create study cohort table structure:
   sql <- SqlRender::loadRenderTranslateSql(sqlFilename = "CreateCohortTable.sql",
-                                           packageName = "PredDrugInducedKidneyInjury",
+                                           packageName = "PredDrugInducedLiverInjury",
                                            dbms = attr(connection, "dbms"),
                                            oracleTempSchema = oracleTempSchema,
                                            cohort_database_schema = cohortDatabaseSchema,
@@ -35,12 +35,12 @@
   
   
   # Instantiate cohorts:
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "PredDrugInducedKidneyInjury")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "PredDrugInducedLiverInjury")
   cohortsToCreate <- utils::read.csv(pathToCsv)
   for (i in 1:nrow(cohortsToCreate)) {
     writeLines(paste("Creating cohort:", cohortsToCreate$name[i]))
     sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortsToCreate$name[i], ".sql"),
-                                             packageName = "PredDrugInducedKidneyInjury",
+                                             packageName = "PredDrugInducedLiverInjury",
                                              dbms = attr(connection, "dbms"),
                                              oracleTempSchema = oracleTempSchema,
                                              cdm_database_schema = cdmDatabaseSchema,
@@ -53,8 +53,8 @@
   }
   
   if(!is.null(cohortVariableSetting)){
-    # if custom cohort covaraites set:
-    pathToCustom <- system.file("settings", cohortVariableSetting, package = "PredDrugInducedKidneyInjury")
+    # if custom cohort covariates set:
+    pathToCustom <- system.file("settings", cohortVariableSetting, package = "PredDrugInducedLiverInjury")
     if(!file.exists(pathToCustom)){
       stop('cohortVariableSetting does not exist in package')
     }
@@ -68,7 +68,7 @@
     for (i in 1:nrow(cohortVarsToCreate)) {
       writeLines(paste("Creating cohort:", cohortVarsToCreate$cohortName[i]))
       sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortVarsToCreate$cohortName[i], ".sql"),
-                                               packageName = "PredDrugInducedKidneyInjury",
+                                               packageName = "PredDrugInducedLiverInjury",
                                                dbms = attr(connection, "dbms"),
                                                oracleTempSchema = oracleTempSchema,
                                                cdm_database_schema = cdmDatabaseSchema,
