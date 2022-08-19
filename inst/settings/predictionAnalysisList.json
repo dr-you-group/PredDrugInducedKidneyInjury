@@ -108,7 +108,7 @@
     "normalizeData": true
   },
   "version": "v2.7.0",
-  "outcomeIds": [1779433],
+  "outcomeIds": [1779558],
   "skeletonVersion": "v0.0.6",
   "conceptSetCrossReference": [],
   "cohortDefinitions": [
@@ -117,98 +117,86 @@
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
           "CollapseType": "ERA",
-          "EraPad": 0
+          "EraPad": 30
         },
         "CensorWindow": {
           "StartDate": null,
           "EndDate": null
         },
-        "ConceptSets": [
-          {
-            "expression": {"items": [{
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
               "isExcluded": false,
               "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3013721,
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 3016723,
                 "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1920-8",
+                "CONCEPT_CODE": "2160-0",
                 "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+                "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
                 "DOMAIN_ID": "Measurement",
                 "STANDARD_CONCEPT_CAPTION": "Standard",
                 "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
+                "INVALID_REASON": "V"
               },
               "includeMapped": false,
               "includeDescendants": false
-            }]},
-            "name": "AST",
-            "id": 3
-          },
-          {
-            "expression": {"items": [{
+            },
+            {
               "isExcluded": false,
               "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3006923,
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4324383,
                 "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1742-6",
+                "CONCEPT_CODE": "70901006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Creatinine measurement",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Procedure",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 3051825,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "38483-4",
                 "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+                "CONCEPT_NAME": "Creatinine [Mass/volume] in Blood",
                 "DOMAIN_ID": "Measurement",
                 "STANDARD_CONCEPT_CAPTION": "Standard",
                 "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
+                "INVALID_REASON": "V"
               },
               "includeMapped": false,
               "includeDescendants": false
-            }]},
-            "name": "ALT",
-            "id": 4
-          },
-          {
-            "expression": {"items": [{
+            },
+            {
               "isExcluded": false,
               "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3024128,
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 3016723,
                 "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1975-2",
+                "CONCEPT_CODE": "2160-0",
                 "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+                "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
                 "DOMAIN_ID": "Measurement",
                 "STANDARD_CONCEPT_CAPTION": "Standard",
                 "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
+                "INVALID_REASON": "V"
               },
               "includeMapped": false,
               "includeDescendants": false
-            }]},
-            "name": "Total bilirubin",
-            "id": 5
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3035995,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "6768-6",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "ALP",
-            "id": 6
-          }
-        ],
+            }
+          ]},
+          "name": "[MOA] creatinine",
+          "id": 7
+        }],
         "EndStrategy": {"DateOffset": {
           "DateField": "StartDate",
           "Offset": 7
@@ -216,223 +204,34 @@
         "cdmVersionRange": ">=5.0.0",
         "CensoringCriteria": [],
         "QualifiedLimit": {"Type": "First"},
-        "InclusionRules": [{
-          "expression": {
-            "CriteriaList": [
-              {
-                "RestrictVisit": false,
-                "StartWindow": {
-                  "UseEventEnd": false,
-                  "Start": {
-                    "Days": null,
-                    "Coeff": -1
-                  },
-                  "End": {
-                    "Days": null,
-                    "Coeff": 1
-                  },
-                  "UseIndexEnd": false
-                },
-                "IgnoreObservationPeriod": false,
-                "EndWindow": null,
-                "Criteria": {"Measurement": {
-                  "Operator": null,
-                  "RangeHigh": null,
-                  "MeasurementTypeExclude": false,
-                  "ValueAsConcept": null,
-                  "CorrelatedCriteria": null,
-                  "RangeHighRatio": {
-                    "Op": "gt",
-                    "Extent": null,
-                    "Value": 5
-                  },
-                  "CodesetId": 4,
-                  "ProviderSpecialty": null,
-                  "Gender": null,
-                  "Unit": null,
-                  "RangeLowRatio": null,
-                  "MeasurementType": null,
-                  "MeasurementSourceConcept": null,
-                  "VisitType": null,
-                  "ValueAsNumber": null,
-                  "First": null,
-                  "OccurrenceStartDate": null,
-                  "RangeLow": null,
-                  "Abnormal": null,
-                  "Age": null
-                }},
-                "Occurrence": {
-                  "Type": 2,
-                  "CountColumn": null,
-                  "IsDistinct": false,
-                  "Count": 1
-                }
-              },
-              {
-                "RestrictVisit": false,
-                "StartWindow": {
-                  "UseEventEnd": false,
-                  "Start": {
-                    "Days": null,
-                    "Coeff": -1
-                  },
-                  "End": {
-                    "Days": null,
-                    "Coeff": 1
-                  },
-                  "UseIndexEnd": false
-                },
-                "IgnoreObservationPeriod": false,
-                "EndWindow": null,
-                "Criteria": {"Measurement": {
-                  "Operator": null,
-                  "RangeHigh": null,
-                  "MeasurementTypeExclude": false,
-                  "ValueAsConcept": null,
-                  "CorrelatedCriteria": null,
-                  "RangeHighRatio": {
-                    "Op": "gt",
-                    "Extent": null,
-                    "Value": 2
-                  },
-                  "CodesetId": 6,
-                  "ProviderSpecialty": null,
-                  "Gender": null,
-                  "Unit": null,
-                  "RangeLowRatio": null,
-                  "MeasurementType": null,
-                  "MeasurementSourceConcept": null,
-                  "VisitType": null,
-                  "ValueAsNumber": null,
-                  "First": null,
-                  "OccurrenceStartDate": null,
-                  "RangeLow": null,
-                  "Abnormal": null,
-                  "Age": null
-                }},
-                "Occurrence": {
-                  "Type": 2,
-                  "CountColumn": null,
-                  "IsDistinct": false,
-                  "Count": 1
-                }
-              }
-            ],
-            "Type": "ALL",
-            "DemographicCriteriaList": [],
-            "Groups": [{
-              "CriteriaList": [
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": null,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": null,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 3
-                    },
-                    "CodesetId": 4,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
-                },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": null,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": null,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 2
-                    },
-                    "CodesetId": null,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
-                }
-              ],
-              "Type": "ALL",
-              "DemographicCriteriaList": [],
-              "Groups": [],
-              "Count": null
-            }],
-            "Count": null
-          },
-          "name": "[MOA] Abnormal_Kidney",
-          "description": null
-        }],
+        "InclusionRules": [],
         "PrimaryCriteria": {
-          "CriteriaList": [],
+          "CriteriaList": [{"Measurement": {
+            "Operator": null,
+            "RangeHigh": null,
+            "MeasurementTypeExclude": false,
+            "ValueAsConcept": null,
+            "CorrelatedCriteria": null,
+            "RangeHighRatio": null,
+            "CodesetId": 7,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "Unit": null,
+            "RangeLowRatio": null,
+            "MeasurementType": null,
+            "MeasurementSourceConcept": null,
+            "VisitType": null,
+            "ValueAsNumber": {
+              "Op": "gt",
+              "Extent": null,
+              "Value": 1.2
+            },
+            "First": null,
+            "OccurrenceStartDate": null,
+            "RangeLow": null,
+            "Abnormal": null,
+            "Age": null
+          }}],
           "PrimaryCriteriaLimit": {"Type": "All"},
           "ObservationWindow": {
             "PostDays": 0,
@@ -442,12 +241,12 @@
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[MOA]Abnormal_Kidney",
+      "name": "[MOA]Abnormal_RFT",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",
       "modifiedBy": null,
-      "id": 1779433
+      "id": 1779558
     },
     {
       "expression": {
@@ -465,85 +264,22 @@
             "expression": {"items": [{
               "isExcluded": false,
               "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3013721,
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 3016723,
                 "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1920-8",
+                "CONCEPT_CODE": "2160-0",
                 "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+                "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
                 "DOMAIN_ID": "Measurement",
                 "STANDARD_CONCEPT_CAPTION": "Standard",
                 "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
+                "INVALID_REASON": "V"
               },
               "includeMapped": false,
               "includeDescendants": false
             }]},
-            "name": "AST",
-            "id": 3
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3006923,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1742-6",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "ALT",
-            "id": 4
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3024128,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1975-2",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "Total bilirubin",
-            "id": 5
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3035995,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "6768-6",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "ALP",
-            "id": 6
+            "name": "[MOA] creatinine",
+            "id": 8
           },
           {
             "expression": {"items": [
@@ -619,11 +355,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 40235485,
+                  "CONCEPT_ID": 1125315,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "1091643",
+                  "CONCEPT_CODE": "161",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "azilsartan",
+                  "CONCEPT_NAME": "acetaminophen",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -636,11 +372,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1351557,
+                  "CONCEPT_ID": 1717240,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "214354",
+                  "CONCEPT_CODE": "732",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "candesartan",
+                  "CONCEPT_NAME": "amphotericin B",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -653,11 +389,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1346686,
+                  "CONCEPT_ID": 1707687,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "83515",
+                  "CONCEPT_CODE": "11124",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "eprosartan",
+                  "CONCEPT_NAME": "vancomycin",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -670,11 +406,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 43009001,
+                  "CONCEPT_ID": 1397599,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "OMOP4700427",
-                  "VOCABULARY_ID": "RxNorm Extension",
-                  "CONCEPT_NAME": "fimasartan potassium",
+                  "CONCEPT_CODE": "2555",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "cisplatin",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -687,11 +423,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1347384,
+                  "CONCEPT_ID": 1703687,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "83818",
+                  "CONCEPT_CODE": "281",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "irbesartan",
+                  "CONCEPT_NAME": "acyclovir",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -704,11 +440,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1367500,
+                  "CONCEPT_ID": 1724700,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "52175",
+                  "CONCEPT_CODE": "33562",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "losartan",
+                  "CONCEPT_NAME": "foscarnet",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -721,11 +457,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 40226742,
+                  "CONCEPT_ID": 19124477,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "321064",
+                  "CONCEPT_CODE": "6448",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "olmesartan",
+                  "CONCEPT_NAME": "lithium",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -738,11 +474,11 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1317640,
+                  "CONCEPT_ID": 1177480,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "73494",
+                  "CONCEPT_CODE": "5640",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "telmisartan",
+                  "CONCEPT_NAME": "ibuprofen",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -755,11 +491,62 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 1308842,
+                  "CONCEPT_ID": 1124300,
                   "STANDARD_CONCEPT": "S",
-                  "CONCEPT_CODE": "69749",
+                  "CONCEPT_CODE": "3355",
                   "VOCABULARY_ID": "RxNorm",
-                  "CONCEPT_NAME": "valsartan",
+                  "CONCEPT_NAME": "diclofenac",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 1115008,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "7258",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "naproxen",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 1185922,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6142",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "ketoprofen",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": false
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 1146810,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8356",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "piroxicam",
                   "DOMAIN_ID": "Drug",
                   "STANDARD_CONCEPT_CAPTION": "Standard",
                   "CONCEPT_CLASS_ID": "Ingredient",
@@ -769,7 +556,7 @@
                 "includeDescendants": false
               }
             ]},
-            "name": "[MOA] Concept_Set",
+            "name": "[MOA] Concept_Set_2(kidney)",
             "id": 9
           }
         ],
@@ -783,402 +570,116 @@
         "InclusionRules": [
           {
             "expression": {
-              "CriteriaList": [
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": 60,
+                    "Coeff": -1
                   },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": null,
-                    "CodesetId": 3,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
+                  "End": {
+                    "Days": 0,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
                 },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": null,
-                    "CodesetId": 4,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
-                },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": null,
-                    "CodesetId": 5,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
-                },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": null,
-                    "CodesetId": 6,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 2,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 1
-                  }
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"Measurement": {
+                  "Operator": null,
+                  "RangeHigh": null,
+                  "MeasurementTypeExclude": false,
+                  "ValueAsConcept": null,
+                  "CorrelatedCriteria": null,
+                  "RangeHighRatio": null,
+                  "CodesetId": 8,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "Unit": null,
+                  "RangeLowRatio": null,
+                  "MeasurementType": null,
+                  "MeasurementSourceConcept": null,
+                  "VisitType": null,
+                  "ValueAsNumber": null,
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "RangeLow": null,
+                  "Abnormal": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 2,
+                  "CountColumn": null,
+                  "IsDistinct": false,
+                  "Count": 2
                 }
-              ],
+              }],
               "Type": "AT_LEAST",
               "DemographicCriteriaList": [],
               "Groups": [],
-              "Count": 2
+              "Count": 1
             },
-            "name": "Previous liver function test measures",
+            "name": "Previous Creatinine test measures",
             "description": null
           },
           {
             "expression": {
-              "CriteriaList": [
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
+              "CriteriaList": [{
+                "RestrictVisit": false,
+                "StartWindow": {
+                  "UseEventEnd": false,
+                  "Start": {
+                    "Days": null,
+                    "Coeff": -1
                   },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 1
-                    },
-                    "CodesetId": 3,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 1,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 0
-                  }
+                  "End": {
+                    "Days": 0,
+                    "Coeff": 1
+                  },
+                  "UseIndexEnd": false
                 },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
+                "IgnoreObservationPeriod": false,
+                "EndWindow": null,
+                "Criteria": {"Measurement": {
+                  "Operator": null,
+                  "RangeHigh": null,
+                  "MeasurementTypeExclude": false,
+                  "ValueAsConcept": null,
+                  "CorrelatedCriteria": null,
+                  "RangeHighRatio": null,
+                  "CodesetId": 8,
+                  "ProviderSpecialty": null,
+                  "Gender": null,
+                  "Unit": null,
+                  "RangeLowRatio": null,
+                  "MeasurementType": null,
+                  "MeasurementSourceConcept": null,
+                  "VisitType": null,
+                  "ValueAsNumber": {
+                    "Op": "lt",
+                    "Extent": null,
+                    "Value": 1.2
                   },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 1
-                    },
-                    "CodesetId": 4,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 1,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 0
-                  }
-                },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 1
-                    },
-                    "CodesetId": 6,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 1,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 0
-                  }
-                },
-                {
-                  "RestrictVisit": false,
-                  "StartWindow": {
-                    "UseEventEnd": false,
-                    "Start": {
-                      "Days": 60,
-                      "Coeff": -1
-                    },
-                    "End": {
-                      "Days": 0,
-                      "Coeff": 1
-                    },
-                    "UseIndexEnd": false
-                  },
-                  "IgnoreObservationPeriod": false,
-                  "EndWindow": null,
-                  "Criteria": {"Measurement": {
-                    "Operator": null,
-                    "RangeHigh": null,
-                    "MeasurementTypeExclude": false,
-                    "ValueAsConcept": null,
-                    "CorrelatedCriteria": null,
-                    "RangeHighRatio": {
-                      "Op": "gt",
-                      "Extent": null,
-                      "Value": 1
-                    },
-                    "CodesetId": 5,
-                    "ProviderSpecialty": null,
-                    "Gender": null,
-                    "Unit": null,
-                    "RangeLowRatio": null,
-                    "MeasurementType": null,
-                    "MeasurementSourceConcept": null,
-                    "VisitType": null,
-                    "ValueAsNumber": null,
-                    "First": null,
-                    "OccurrenceStartDate": null,
-                    "RangeLow": null,
-                    "Abnormal": null,
-                    "Age": null
-                  }},
-                  "Occurrence": {
-                    "Type": 1,
-                    "CountColumn": null,
-                    "IsDistinct": false,
-                    "Count": 0
-                  }
+                  "First": null,
+                  "OccurrenceStartDate": null,
+                  "RangeLow": null,
+                  "Abnormal": null,
+                  "Age": null
+                }},
+                "Occurrence": {
+                  "Type": 1,
+                  "CountColumn": null,
+                  "IsDistinct": false,
+                  "Count": 0
                 }
-              ],
+              }],
               "Type": "ALL",
               "DemographicCriteriaList": [],
               "Groups": [],
               "Count": null
             },
-            "name": "Without abnormal LFT",
+            "name": "Without abnormal Cr",
             "description": null
           }
         ],
@@ -1199,18 +700,18 @@
           "PrimaryCriteriaLimit": {"Type": "All"},
           "ObservationWindow": {
             "PostDays": 0,
-            "PriorDays": 60
+            "PriorDays": 30
           }
         }
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[MOA]normal_Kidney_concept",
+      "name": "[MOA]normal_RFT_concept_set",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",
       "modifiedBy": null,
-      "id": 1779395
+      "id": 1779961
     }
   ],
   "modelSettings": [
@@ -1237,7 +738,7 @@
       ]
     }}
   ],
-  "name": "[MOA]Prediction of ALI among patients using drug",
+  "name": "[MOA] PLPKidney",
   "covariateSettings": [{
     "VisitCountMediumTerm": false,
     "ObservationShortTerm": true,
