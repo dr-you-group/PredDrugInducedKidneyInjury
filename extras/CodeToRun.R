@@ -96,5 +96,5 @@ execute(databaseDetails = databaseDetails,
         logSettings = logSettings)
 
 # Uncomment and run the next line to see the shiny results:
-outputFolder <- ""
+outputFolder <- "C:/Users/whyj1/Documents/MOA/Kidney/plpResult_sinchon/output"
 PatientLevelPrediction::viewMultiplePlp(outputFolder)
