@@ -14,95 +14,11 @@
         "isExcluded": false,
         "concept": {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3013721,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "1920-8",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "AST",
-      "id": 3
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3006923,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "1742-6",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "ALT",
-      "id": 4
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3024128,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "1975-2",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Bilirubin.total [Mass/volume] in Serum or Plasma",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "Total bilirubin",
-      "id": 5
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3035995,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "6768-6",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "ALP",
-      "id": 6
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
           "CONCEPT_ID": 1724700,
           "STANDARD_CONCEPT": "S",
           "CONCEPT_CODE": "161",
           "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Acetaminophen",
+          "CONCEPT_NAME": "foscarnet",
           "DOMAIN_ID": "Drug",
           "STANDARD_CONCEPT_CAPTION": "Standard",
           "CONCEPT_CLASS_ID": "Ingredient",
@@ -111,7 +27,7 @@
         "includeMapped": false,
         "includeDescendants": false
       }]},
-      "name": "Acetaminophen",
+      "name": "foscarnet",
       "id": 7
     },
     {
@@ -206,7 +122,7 @@
           "StartWindow": {
             "UseEventEnd": false,
             "Start": {
-              "Days": null,
+              "Days": 60,
               "Coeff": -1
             },
             "End": {
