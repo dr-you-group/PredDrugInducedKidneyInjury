@@ -88,8 +88,7 @@
     },{
       "id": "1779595",
       "name": "MOAnormal_RFT_piroxicam"
-    },
-
+    }
   ],
   "modelSettings": [
     {"LassoLogisticRegressionSettings": {
