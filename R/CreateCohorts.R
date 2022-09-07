@@ -32,14 +32,14 @@
                                            cohort_table = cohortTable)
   DatabaseConnector::executeSql(connection, sql, progressBar = FALSE, reportOverallTime = FALSE)
   
-  
+  oracleTempSchema <- NULL
   
   # Instantiate cohorts:
   pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "PredDrugInducedKidneyInjury")
   cohortsToCreate <- utils::read.csv(pathToCsv)
   for (i in 1:nrow(cohortsToCreate)) {
-    writeLines(paste("Creating cohort:", cohortsToCreate$name[i]))
-    sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortsToCreate$name[i], ".sql"),
+    writeLines(paste("Creating cohort:", cohortsToCreate$cohortName[i]))
+    sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortsToCreate$cohortName[i], ".sql"),
                                              packageName = "PredDrugInducedKidneyInjury",
                                              dbms = attr(connection, "dbms"),
                                              oracleTempSchema = oracleTempSchema,
