@@ -36,60 +36,6 @@
   "outcomeIds": [1779558],
   "skeletonVersion": "v0.0.6",
   "conceptSetCrossReference": [],
-  "cohortDefinitions": [
-    {
-      "id": 1779558,
-      "name": "MOAAbnormal_RFT"
-    },{
-      "id": 1779580,
-      "name": "MOAnormal_RFT_acetaminophen"
-    },{
-      "id": 1779581,
-      "name": "MOAnormal_RFT_meloxicam"
-    },{
-      "id": 1779582,
-      "name": "MOAnormal_RFT_celecoxib"
-    },{
-      "id": 1779583,
-      "name": "MOAnormal_RFT_valproate"
-    },{
-      "id": 1779584,
-      "name": "MOAnormal_RFT_lamotrigine"
-    },{
-      "id": 1779585,
-      "name": "MOAnormal_RFT_amphotericinB"
-    },{
-      "id": 1779586,
-      "name": "MOAnormal_RFT_vancomycin"
-    },{
-      "id": 1779587,
-      "name": "MOAnormal_RFT_cisplatin"
-    },{
-      "id": 1779588,
-      "name": "MOAnormal_RFT_acyclovir"
-    },{
-      "id": 1779589,
-      "name": "MOAnormal_RFT_foscarnet"
-    },{
-      "id": 1779590,
-      "name": "MOAnormal_RFT_lithium"
-    },{
-      "id": 1779591,
-      "name": "MOAnormal_RFT_ibuprofen"
-    },{
-      "id": 1779592,
-      "name": "MOAnormal_RFT_diclofenac"
-    },{
-      "id": 1779593,
-      "name": "MOAnormal_RFT_naproxen"
-    },{
-      "id": 1779594,
-      "name": "MOAnormal_RFT_ketoprofen"
-    },{
-      "id": 1779595,
-      "name": "MOAnormal_RFT_piroxicam"
-    }
-  ],
   "modelSettings": [
     {"LassoLogisticRegressionSettings": {
       "seed": null,
